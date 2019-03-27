@@ -32,7 +32,7 @@
        </th>
      </tr>
      <tr class="row1">
-         <th class="col0"><?php echo $lang['fullname'] ?></th>
+         <th class="col0"><?php echo $lang['user'] ?></th>
 <?php foreach ($template['choices'] as $choice) {  ?>
          <td class="centeralign" style="width:<?php echo $template['fieldwidth'] ?>"><?php echo $choice ?></td>
 <?php } ?>
@@ -41,7 +41,7 @@
 <?php foreach ($template['doodleData'] as $fullname => $userData) { ?>
      <tr>
          <td class="rightalign">
-           <?php echo $userData['editLinks'].$fullname.$userData['username'] ?>
+           <?php echo $userData['editLinks'].($userData['username'] ?: $fullname) ?>
          </td>
          <?php for ($col = 0; $col < $c; $col++) {
              echo $userData['choice'][$col];
