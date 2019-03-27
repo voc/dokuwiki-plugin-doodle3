@@ -14,7 +14,7 @@
 
 <!-- Doodle Plugin -->
 <div class="doodle3_scrollcontainer">
-<form action="<?php echo wl() ?>" method="post" name="doodle__form" id="<?php echo $template['formId'] ?>" accept-charset="utf-8" >
+<form action="<?php echo wl($ID) ?>" method="post" name="doodle__form" id="<?php echo $template['formId'] ?>" accept-charset="utf-8" >
 
 <input type="hidden" name="sectok" value="<?php echo getSecurityToken() ?>" />
 <input type="hidden" name="do" value="show" >
